@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Política de Privacidade — Castro & Alves Advogados. Saiba como tratamos seus dados pessoais em conformidade com a LGPD (Lei nº 13.709/2018).">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg viewBox='0 0 48 48' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='1' y='1' width='46' height='46' fill='%231E3A5F' stroke='%233D7ABF' stroke-width='2'/%3E%3Ctext x='15' y='33' font-family='Georgia,serif' font-size='22' font-weight='400' fill='%233D7ABF' text-anchor='middle'%3EC%3C/text%3E%3Cline x1='24' y1='10' x2='24' y2='38' stroke='%233D7ABF' stroke-width='0.8' opacity='0.4'/%3E%3Ctext x='33' y='33' font-family='Georgia,serif' font-size='22' font-weight='400' fill='%23F0F2F5' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E">
+<title>Política de Privacidade — Castro & Alves Advogados</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --accent: #1E3A5F;
+    --accent-light: #2E5A8A;
+    --accent-glow: #3D7ABF;
+    --dark: #08090C;
+    --dark2: #0E1117;
+    --dark3: #161B24;
+    --white: #F0F2F5;
+    --white-warm: #E4E7EC;
+    --text-muted: #7A8494;
+    --border: rgba(30,58,95,0.22);
+    --gray-surface: #1D2230;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--dark);
+    background-image:
+      radial-gradient(ellipse 80% 60% at 50% 40%, rgba(30,58,95,0.14) 0%, transparent 70%),
+      radial-gradient(ellipse 50% 50% at 80% 80%, rgba(61,122,191,0.05) 0%, transparent 60%);
+    background-attachment: fixed;
+    color: var(--white);
+    overflow-x: hidden;
+  }
+
+  /* ---- NAV ---- */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    padding: 0 5%;
+    height: 80px;
+    display: flex; justify-content: space-between; align-items: center;
+    background: rgba(8,9,12,0.95);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--border);
+    transition: background 0.4s, box-shadow 0.4s, height 0.4s;
+  }
+  nav.scrolled {
+    height: 68px;
+    background: rgba(8,9,12,0.97);
+    box-shadow: 0 4px 30px rgba(0,0,0,0.4);
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    text-decoration: none;
+    flex-shrink: 0;
+  }
+  .logo-icon {
+    width: 46px;
+    height: 46px;
+    flex-shrink: 0;
+    transition: width 0.4s, height 0.4s;
+  }
+  nav.scrolled .logo-icon { width: 38px; height: 38px; }
+  .logo-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .logo-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent-glow);
+    line-height: 1.1;
+    white-space: nowrap;
+  }
+  .logo-name span { color: var(--white); font-weight: 300; }
+  .logo-sub {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.55rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    font-weight: 300;
+    white-space: nowrap;
+  }
+
+  .nav-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: var(--white);
+    font-size: 0.72rem;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    font-weight: 400;
+    opacity: 0.65;
+    transition: opacity 0.3s, color 0.3s;
+    padding: 10px 20px;
+    border: 1px solid var(--border);
+  }
+  .nav-back:hover { opacity: 1; color: var(--accent-glow); border-color: var(--accent-glow); }
+
+  /* ---- HERO HEADER ---- */
+  .policy-hero {
+    padding: 160px 6% 80px;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px solid var(--border);
+  }
+  .policy-hero-bg {
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse 70% 50% at 30% 60%, rgba(30,58,95,0.12) 0%, transparent 65%),
+      radial-gradient(ellipse 40% 40% at 80% 30%, rgba(61,122,191,0.06) 0%, transparent 50%);
+  }
+  .policy-hero-content {
+    position: relative; z-index: 2;
+    max-width: 800px;
+  }
+  .policy-eyebrow {
+    font-size: 0.7rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--accent-glow);
+    display: flex; align-items: center; gap: 12px;
+    margin-bottom: 24px;
+  }
+  .policy-eyebrow::before {
+    content: '';
+    display: inline-block; width: 30px; height: 1px;
+    background: var(--accent-glow);
+  }
+  .policy-hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.4rem, 5vw, 4rem);
+    font-weight: 300;
+    line-height: 1.1;
+    margin-bottom: 20px;
+  }
+  .policy-hero h1 em { font-style: italic; color: var(--accent-glow); }
+  .policy-hero .hero-sub {
+    font-size: 0.95rem;
+    line-height: 1.75;
+    color: rgba(240,242,245,0.6);
+    font-weight: 300;
+    max-width: 600px;
+  }
+  .policy-hero .last-update {
+    margin-top: 24px;
+    font-size: 0.72rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    display: flex; align-items: center; gap: 8px;
+  }
+  .policy-hero .last-update::before {
+    content: '';
+    width: 6px; height: 6px;
+    background: var(--accent-glow);
+    border-radius: 50%;
+  }
+
+  /* ---- CONTENT ---- */
+  .policy-wrapper {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 0;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  /* Sidebar TOC */
+  .policy-sidebar {
+    border-right: 1px solid var(--border);
+    padding: 48px 32px 48px 6%;
+    position: sticky;
+    top: 80px;
+    height: fit-content;
+    max-height: calc(100vh - 80px);
+    overflow-y: auto;
+  }
+  .toc-title {
+    font-size: 0.62rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--accent-glow);
+    margin-bottom: 24px;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .toc-title::before {
+    content: '';
+    width: 16px; height: 1px;
+    background: var(--accent-glow);
+  }
+  .toc-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .toc-list a {
+    display: block;
+    text-decoration: none;
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    padding: 8px 14px;
+    border-left: 2px solid transparent;
+    transition: all 0.3s;
+    font-weight: 300;
+    line-height: 1.5;
+  }
+  .toc-list a:hover,
+  .toc-list a.active {
+    color: var(--accent-glow);
+    border-left-color: var(--accent-glow);
+    background: rgba(30,58,95,0.06);
+  }
+
+  /* Main content */
+  .policy-content {
+    padding: 60px 6% 100px 56px;
+  }
+
+  .policy-section {
+    margin-bottom: 56px;
+    scroll-margin-top: 100px;
+  }
+
+  .policy-section-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: rgba(61,122,191,0.12);
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+
+  .policy-section h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin-bottom: 20px;
+    color: var(--white);
+    line-height: 1.2;
+  }
+  .policy-section h2 em { color: var(--accent-glow); font-style: italic; }
+
+  .policy-section h3 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: var(--accent-glow);
+    margin: 28px 0 12px;
+    letter-spacing: 0.04em;
+  }
+
+  .policy-section p {
+    font-size: 0.9rem;
+    line-height: 1.85;
+    color: rgba(240,242,245,0.7);
+    font-weight: 300;
+    margin-bottom: 16px;
+  }
+
+  .policy-section ul {
+    list-style: none;
+    margin: 12px 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .policy-section li {
+    font-size: 0.88rem;
+    line-height: 1.75;
+    color: rgba(240,242,245,0.65);
+    font-weight: 300;
+    padding-left: 22px;
+    position: relative;
+  }
+  .policy-section li::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 10px;
+    width: 6px; height: 6px;
+    border: 1px solid var(--accent-glow);
+    border-radius: 50%;
+  }
+
+  .policy-highlight {
+    background: rgba(30,58,95,0.08);
+    border-left: 3px solid var(--accent-glow);
+    padding: 20px 24px;
+    margin: 20px 0;
+    font-size: 0.88rem;
+    line-height: 1.8;
+    color: rgba(240,242,245,0.75);
+    font-weight: 300;
+  }
+  .policy-highlight strong {
+    color: var(--accent-glow);
+    font-weight: 500;
+  }
+
+  .lgpd-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(30,58,95,0.1);
+    border: 1px solid var(--border);
+    padding: 8px 18px;
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent-glow);
+    margin-bottom: 16px;
+  }
+  .lgpd-badge::before {
+    content: '🔒';
+    font-size: 0.8rem;
+  }
+
+  /* ---- FOOTER ---- */
+  footer {
+    background: var(--dark);
+    border-top: 1px solid var(--border);
+    padding: 48px 6% 30px;
+  }
+  .footer-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .footer-copy {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    font-weight: 300;
+  }
+  .footer-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent-glow);
+    font-weight: 400;
+    transition: opacity 0.3s;
+  }
+  .footer-back:hover { opacity: 0.7; }
+
+  /* ---- RESPONSIVE ---- */
+  @media (max-width: 900px) {
+    .policy-wrapper { grid-template-columns: 1fr; }
+    .policy-sidebar {
+      position: relative;
+      top: 0;
+      border-right: none;
+      border-bottom: 1px solid var(--border);
+      padding: 32px 6%;
+      max-height: none;
+    }
+    .toc-list { flex-direction: row; flex-wrap: wrap; gap: 4px; }
+    .toc-list a { border-left: none; border-bottom: 2px solid transparent; padding: 6px 12px; font-size: 0.7rem; }
+    .toc-list a:hover, .toc-list a.active { border-left: none; border-bottom-color: var(--accent-glow); }
+    .policy-content { padding: 40px 6% 80px; }
+    nav { padding: 0 4%; }
+    .logo-icon { width: 36px; height: 36px; }
+    .logo-name { font-size: 0.95rem; }
+    .logo-sub { font-size: 0.42rem; }
+  }
+
+  @media (max-width: 500px) {
+    .policy-hero { padding: 140px 5% 60px; }
+    .policy-hero h1 { font-size: 2rem; }
+    .policy-hero .hero-sub { font-size: 0.85rem; }
+    .policy-section h2 { font-size: 1.3rem; }
+    .policy-section-num { font-size: 2rem; }
+    .nav-back { font-size: 0.6rem; padding: 8px 14px; }
+    .footer-inner { flex-direction: column; text-align: center; }
+    .toc-list a { font-size: 0.62rem; padding: 5px 8px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="logo" style="text-decoration:none;">
+    <svg class="logo-icon" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+      <rect x="1.5" y="1.5" width="45" height="45" fill="none" stroke="#3D7ABF" stroke-width="1.2"/>
+      <rect x="5" y="5" width="38" height="38" fill="none" stroke="rgba(30,58,95,0.2)" stroke-width="0.5"/>
+      <rect x="10" y="1.5" width="28" height="2" fill="#3D7ABF"/>
+      <text x="15.5" y="33" font-family="'Cormorant Garamond', Georgia, serif" font-size="22" font-weight="400" fill="#3D7ABF" text-anchor="middle">C</text>
+      <line x1="24" y1="10" x2="24" y2="38" stroke="rgba(30,58,95,0.35)" stroke-width="0.6"/>
+      <text x="33" y="33" font-family="'Cormorant Garamond', Georgia, serif" font-size="22" font-weight="400" fill="#F0F2F5" text-anchor="middle">A</text>
+      <rect x="10" y="44.5" width="28" height="2" fill="#3D7ABF"/>
+      <line x1="1.5" y1="7" x2="7" y2="7" stroke="#3D7ABF" stroke-width="1.4"/>
+      <line x1="7" y1="1.5" x2="7" y2="7" stroke="#3D7ABF" stroke-width="1.4"/>
+      <line x1="41" y1="1.5" x2="41" y2="7" stroke="#3D7ABF" stroke-width="1.4"/>
+      <line x1="41" y1="7" x2="46.5" y2="7" stroke="#3D7ABF" stroke-width="1.4"/>
+      <line x1="1.5" y1="41" x2="7" y2="41" stroke="#3D7ABF" stroke-width="1.4"/>
+      <line x1="7" y1="41" x2="7" y2="46.5" stroke="#3D7ABF" stroke-width="1.4"/>
+      <line x1="41" y1="41" x2="46.5" y2="41" stroke="#3D7ABF" stroke-width="1.4"/>
+      <line x1="41" y1="41" x2="41" y2="46.5" stroke="#3D7ABF" stroke-width="1.4"/>
+    </svg>
+    <div class="logo-text">
+      <div class="logo-name">Castro <span>& Alves</span></div>
+      <div class="logo-sub">Advogados e Associados</div>
+    </div>
+  </a>
+  <a href="index.html" class="nav-back">← Voltar ao Site</a>
+</nav>
+
+<!-- HERO -->
+<section class="policy-hero">
+  <div class="policy-hero-bg"></div>
+  <div class="policy-hero-content">
+    <div class="policy-eyebrow">Transparência & Conformidade</div>
+    <h1>Política de <em>Privacidade</em></h1>
+    <p class="hero-sub">
+      O escritório Castro & Alves Advogados e Associados valoriza a transparência e o respeito à privacidade dos seus clientes e visitantes. Esta política detalha como tratamos seus dados pessoais em conformidade com a Lei Geral de Proteção de Dados (LGPD — Lei nº 13.709/2018).
+    </p>
+    <div class="last-update">Última atualização: <span id="data-atualizacao"></span></div>
+  </div>
+</section>
+
+<!-- CONTENT -->
+<div class="policy-wrapper">
+
+  <!-- SIDEBAR TOC -->
+  <aside class="policy-sidebar">
+    <div class="toc-title">Índice</div>
+    <ul class="toc-list">
+      <li><a href="#s1">Controlador dos Dados</a></li>
+      <li><a href="#s2">Dados Coletados</a></li>
+      <li><a href="#s3">Finalidade do Tratamento</a></li>
+      <li><a href="#s4">Base Legal</a></li>
+      <li><a href="#s5">Compartilhamento</a></li>
+      <li><a href="#s6">Armazenamento e Segurança</a></li>
+      <li><a href="#s7">Seus Direitos (LGPD)</a></li>
+      <li><a href="#s8">Cookies e Tecnologias</a></li>
+      <li><a href="#s9">Retenção dos Dados</a></li>
+      <li><a href="#s10">Menores de Idade</a></li>
+      <li><a href="#s11">Alterações nesta Política</a></li>
+      <li><a href="#s12">Canal de Contato — DPO</a></li>
+    </ul>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="policy-content">
+
+    <!-- 1 -->
+    <div class="policy-section" id="s1">
+      <div class="policy-section-num">01</div>
+      <h2>Controlador dos <em>Dados</em></h2>
+      <p>
+        O controlador responsável pelo tratamento dos seus dados pessoais é o escritório <strong style="color:var(--white);">Castro & Alves Advogados e Associados</strong>, inscrito na OAB/SP, com sede na cidade de São Paulo — SP.
+      </p>
+      <p>
+        As advogadas responsáveis são a Dra. Thais Castro e a Dra. Ana Claudia Alves, cofundadoras e sócias do escritório, comprometidas com a proteção dos dados pessoais de todos os clientes, parceiros e visitantes deste site.
+      </p>
+    </div>
+
+    <!-- 2 -->
+    <div class="policy-section" id="s2">
+      <div class="policy-section-num">02</div>
+      <h2>Dados Pessoais <em>Coletados</em></h2>
+      <p>
+        Coletamos dados pessoais de forma direta (quando você nos fornece) e indireta (dados técnicos de navegação). Os dados podem incluir:
+      </p>
+
+      <h3>Dados fornecidos por você</h3>
+      <ul>
+        <li>Nome completo</li>
+        <li>Endereço de e-mail</li>
+        <li>Número de telefone e/ou WhatsApp</li>
+        <li>Área de interesse jurídico informada no formulário</li>
+        <li>Descrição do caso ou situação jurídica</li>
+        <li>Documentos enviados para análise (RG, CPF, contracheques, CTPS, laudos médicos, entre outros pertinentes ao caso)</li>
+      </ul>
+
+      <h3>Dados coletados automaticamente</h3>
+      <ul>
+        <li>Endereço IP e geolocalização aproximada</li>
+        <li>Tipo de navegador e sistema operacional</li>
+        <li>Páginas visitadas no site e tempo de permanência</li>
+        <li>Dados de cookies e identificadores de sessão</li>
+        <li>Origem de acesso (buscadores, redes sociais, links diretos)</li>
+      </ul>
+    </div>
+
+    <!-- 3 -->
+    <div class="policy-section" id="s3">
+      <div class="policy-section-num">03</div>
+      <h2>Finalidade do <em>Tratamento</em></h2>
+      <p>Os dados pessoais coletados são utilizados para as seguintes finalidades:</p>
+      <ul>
+        <li>Responder a consultas e solicitações enviadas pelo formulário de contato</li>
+        <li>Viabilizar o atendimento jurídico e a prestação de serviços advocatícios</li>
+        <li>Analisar a viabilidade jurídica do caso apresentado</li>
+        <li>Entrar em contato para agendamento de consultas e acompanhamento processual</li>
+        <li>Cumprir obrigações legais, regulatórias e do Código de Ética da OAB</li>
+        <li>Melhorar a experiência de navegação no site e otimizar nossos serviços</li>
+        <li>Gerar estatísticas anônimas e agregadas sobre o uso do site</li>
+        <li>Enviar comunicações informativas sobre andamento de processos (quando aplicável)</li>
+      </ul>
+      <div class="policy-highlight">
+        <strong>Importante:</strong> Seus dados nunca serão utilizados para fins de marketing ou publicidade sem o seu consentimento expresso e específico.
+      </div>
+    </div>
+
+    <!-- 4 -->
+    <div class="policy-section" id="s4">
+      <div class="policy-section-num">04</div>
+      <h2>Base <em>Legal</em> para o Tratamento</h2>
+      <div class="lgpd-badge">Lei nº 13.709/2018 — LGPD</div>
+      <p>
+        O tratamento dos seus dados pessoais é realizado com fundamento nas seguintes bases legais previstas na LGPD:
+      </p>
+      <ul>
+        <li><strong style="color:var(--accent-glow);">Consentimento (Art. 7º, I):</strong> quando você preenche formulários e autoriza o uso dos seus dados para contato e atendimento</li>
+        <li><strong style="color:var(--accent-glow);">Execução de contrato (Art. 7º, V):</strong> para a prestação de serviços jurídicos contratados</li>
+        <li><strong style="color:var(--accent-glow);">Exercício regular de direitos (Art. 7º, VI):</strong> para o exercício de direitos em processos judiciais, administrativos ou arbitrais</li>
+        <li><strong style="color:var(--accent-glow);">Cumprimento de obrigação legal (Art. 7º, II):</strong> para atender exigências legais e regulatórias, incluindo normas da OAB</li>
+        <li><strong style="color:var(--accent-glow);">Legítimo interesse (Art. 7º, IX):</strong> para melhorar nossos serviços e a experiência no site, sempre respeitando seus direitos e expectativas</li>
+      </ul>
+    </div>
+
+    <!-- 5 -->
+    <div class="policy-section" id="s5">
+      <div class="policy-section-num">05</div>
+      <h2>Compartilhamento de <em>Dados</em></h2>
+      <p>
+        Seus dados pessoais podem ser compartilhados nas seguintes situações, sempre com o máximo cuidado e dentro dos limites legais:
+      </p>
+      <ul>
+        <li>Com órgãos do Poder Judiciário, Ministério Público e demais autoridades competentes, quando necessário para a defesa dos seus interesses em processos judiciais ou administrativos</li>
+        <li>Com peritos, assistentes técnicos e outros profissionais envolvidos no patrocínio da causa</li>
+        <li>Com prestadores de serviços essenciais ao funcionamento do escritório (hospedagem do site, ferramentas de comunicação), mediante contratos que asseguram a proteção dos dados</li>
+        <li>Em cumprimento a ordens judiciais ou determinações de autoridades competentes</li>
+      </ul>
+      <div class="policy-highlight">
+        <strong>Garantia:</strong> O escritório Castro & Alves <strong>jamais comercializará</strong> seus dados pessoais a terceiros para quaisquer fins, em nenhuma hipótese.
+      </div>
+    </div>
+
+    <!-- 6 -->
+    <div class="policy-section" id="s6">
+      <div class="policy-section-num">06</div>
+      <h2>Armazenamento e <em>Segurança</em></h2>
+      <p>
+        Empregamos medidas técnicas e organizacionais adequadas para proteger seus dados pessoais contra acesso não autorizado, destruição, perda, alteração ou qualquer forma de tratamento indevido:
+      </p>
+      <ul>
+        <li>Criptografia de dados em trânsito (protocolo HTTPS/SSL)</li>
+        <li>Controle de acesso restrito aos dados — somente profissionais autorizados e vinculados ao sigilo profissional advocatício</li>
+        <li>Armazenamento em servidores seguros com backup periódico</li>
+        <li>Sigilo profissional assegurado pelo Código de Ética e Disciplina da OAB (Art. 25 a 27 do CED)</li>
+        <li>Revisão periódica dos procedimentos de segurança</li>
+      </ul>
+      <p>
+        Embora adotemos as melhores práticas de segurança, nenhum sistema é completamente inviolável. Em caso de incidente de segurança que possa gerar risco ou dano relevante, notificaremos os titulares afetados e a Autoridade Nacional de Proteção de Dados (ANPD), nos termos do Art. 48 da LGPD.
+      </p>
+    </div>
+
+    <!-- 7 -->
+    <div class="policy-section" id="s7">
+      <div class="policy-section-num">07</div>
+      <h2>Seus <em>Direitos</em> como Titular</h2>
+      <div class="lgpd-badge">Artigos 17 a 22 da LGPD</div>
+      <p>
+        A LGPD garante a você, titular dos dados pessoais, os seguintes direitos, que podem ser exercidos a qualquer momento mediante solicitação ao nosso escritório:
+      </p>
+      <ul>
+        <li><strong style="color:var(--accent-glow);">Confirmação e acesso:</strong> confirmar a existência de tratamento e acessar seus dados pessoais</li>
+        <li><strong style="color:var(--accent-glow);">Correção:</strong> solicitar a correção de dados incompletos, inexatos ou desatualizados</li>
+        <li><strong style="color:var(--accent-glow);">Anonimização, bloqueio ou eliminação:</strong> solicitar a anonimização, bloqueio ou eliminação de dados desnecessários, excessivos ou tratados em desconformidade com a LGPD</li>
+        <li><strong style="color:var(--accent-glow);">Portabilidade:</strong> solicitar a portabilidade dos dados a outro fornecedor de serviço, quando aplicável</li>
+        <li><strong style="color:var(--accent-glow);">Eliminação com consentimento:</strong> solicitar a eliminação dos dados tratados com base no consentimento</li>
+        <li><strong style="color:var(--accent-glow);">Informação sobre compartilhamento:</strong> saber com quais entidades públicas e privadas seus dados foram compartilhados</li>
+        <li><strong style="color:var(--accent-glow);">Revogação do consentimento:</strong> revogar o consentimento a qualquer momento, de forma gratuita e facilitada</li>
+        <li><strong style="color:var(--accent-glow);">Oposição:</strong> opor-se ao tratamento realizado com base em hipóteses de dispensa de consentimento, caso haja descumprimento da LGPD</li>
+      </ul>
+      <div class="policy-highlight">
+        <strong>Como exercer seus direitos:</strong> Envie uma solicitação por e-mail ou através do formulário de contato do nosso site. Responderemos em até <strong>15 dias úteis</strong>, conforme previsto na legislação.
+      </div>
+    </div>
+
+    <!-- 8 -->
+    <div class="policy-section" id="s8">
+      <div class="policy-section-num">08</div>
+      <h2>Cookies e <em>Tecnologias</em> de Rastreamento</h2>
+      <p>
+        Nosso site pode utilizar cookies e tecnologias semelhantes para melhorar a experiência de navegação. Os cookies utilizados podem ser:
+      </p>
+      <ul>
+        <li><strong style="color:var(--accent-glow);">Cookies essenciais:</strong> necessários para o funcionamento básico do site</li>
+        <li><strong style="color:var(--accent-glow);">Cookies analíticos:</strong> utilizados para entender como os visitantes interagem com o site (ex: Google Analytics), gerando dados anônimos e agregados</li>
+        <li><strong style="color:var(--accent-glow);">Cookies de desempenho:</strong> auxiliam na otimização de carregamento e performance do site</li>
+      </ul>
+      <p>
+        Você pode configurar seu navegador para recusar cookies ou ser alertado quando um cookie está sendo enviado. Contudo, algumas funcionalidades do site podem não funcionar corretamente sem cookies.
+      </p>
+    </div>
+
+    <!-- 9 -->
+    <div class="policy-section" id="s9">
+      <div class="policy-section-num">09</div>
+      <h2>Retenção dos <em>Dados</em></h2>
+      <p>
+        Seus dados pessoais serão armazenados pelo tempo necessário para cumprir as finalidades para as quais foram coletados, respeitando os seguintes critérios:
+      </p>
+      <ul>
+        <li>Dados de clientes e processos judiciais: mantidos pelo prazo prescricional aplicável (até 5 anos após o trânsito em julgado, conforme a natureza da ação), acrescido dos prazos de guarda documental exigidos pela OAB</li>
+        <li>Dados de contato de visitantes do site: mantidos por até 12 meses após o último contato, salvo quando houver relação contratual vigente</li>
+        <li>Dados de navegação e cookies: conforme a validade de cada cookie, geralmente não superior a 24 meses</li>
+      </ul>
+      <p>
+        Após o término do prazo de retenção, os dados serão eliminados de forma segura ou anonimizados, salvo se houver obrigação legal de conservação.
+      </p>
+    </div>
+
+    <!-- 10 -->
+    <div class="policy-section" id="s10">
+      <div class="policy-section-num">10</div>
+      <h2>Dados de <em>Menores</em> de Idade</h2>
+      <p>
+        Nosso site e serviços não são direcionados a menores de 18 anos. Não coletamos intencionalmente dados pessoais de crianças ou adolescentes sem o consentimento específico e em destaque de pelo menos um dos pais ou responsável legal, nos termos do Art. 14 da LGPD.
+      </p>
+      <p>
+        Caso tenhamos conhecimento de que dados de menores foram coletados sem a devida autorização, procederemos à eliminação imediata dessas informações.
+      </p>
+    </div>
+
+    <!-- 11 -->
+    <div class="policy-section" id="s11">
+      <div class="policy-section-num">11</div>
+      <h2>Alterações nesta <em>Política</em></h2>
+      <p>
+        Esta Política de Privacidade pode ser atualizada periodicamente para refletir mudanças nas nossas práticas de proteção de dados, alterações legislativas ou regulatórias. Recomendamos que você revise esta página regularmente.
+      </p>
+      <p>
+        Em caso de alterações significativas, publicaremos um aviso destacado no site. A data da última atualização estará sempre indicada no topo desta página.
+      </p>
+    </div>
+
+    <!-- 12 -->
+    <div class="policy-section" id="s12">
+      <div class="policy-section-num">12</div>
+      <h2>Canal de Contato — <em>Encarregado (DPO)</em></h2>
+      <p>
+        Para exercer seus direitos como titular de dados, esclarecer dúvidas sobre esta política ou reportar qualquer questão relacionada à privacidade e proteção de dados, entre em contato:
+      </p>
+      <div style="margin-top:20px;padding:28px 32px;background:var(--dark3);border:1px solid var(--border);display:flex;flex-direction:column;gap:14px;">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;color:var(--white);font-weight:400;">Castro & Alves Advogados e Associados</div>
+        <div style="display:flex;flex-direction:column;gap:8px;font-size:0.88rem;color:rgba(240,242,245,0.65);font-weight:300;">
+          <span>📍 São Paulo — SP</span>
+          <span>📞 <a href="https://wa.me/5511913545015" target="_blank" style="color:rgba(240,242,245,0.65);text-decoration:none;">(11) 9 1354-5015</a></span>
+          <span>✉️ <a href="mailto:adv.thaiscastro@gmail.com" style="color:rgba(240,242,245,0.65);text-decoration:none;">adv.thaiscastro@gmail.com</a></span>
+          <span>🕐 Seg — Sex: 9h às 18h</span>
+        </div>
+        <div style="margin-top:8px;font-size:0.68rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--text-muted);">
+          Encarregada pelo Tratamento de Dados Pessoais (DPO): Dra. Thais Castro
+        </div>
+      </div>
+
+      <div class="policy-highlight" style="margin-top:28px;">
+        <strong>Autoridade Nacional:</strong> Caso entenda que o tratamento dos seus dados viola a legislação, você tem o direito de apresentar reclamação perante a <strong>Autoridade Nacional de Proteção de Dados (ANPD)</strong> — <em>www.gov.br/anpd</em>.
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <span class="footer-copy">© <span id="copyright-year"></span> Castro & Alves Advogados e Associados. Todos os direitos reservados.</span>
+    <a href="index.html" class="footer-back">← Voltar ao site principal</a>
+  </div>
+</footer>
+
+<script>
+  // Data de atualização automática
+  const meses = ['Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'];
+  const hoje = new Date();
+  document.getElementById('data-atualizacao').textContent = meses[hoje.getMonth()] + ' de ' + hoje.getFullYear();
+
+  // Copyright year
+  document.getElementById('copyright-year').textContent = hoje.getFullYear();
+
+  // Nav scroll effect
+  const nav = document.querySelector('nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 60);
+  });
+
+  // Active TOC highlight on scroll
+  const sections = document.querySelectorAll('.policy-section');
+  const tocLinks = document.querySelectorAll('.toc-list a');
+
+  const observerToc = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        tocLinks.forEach(link => link.classList.remove('active'));
+        const activeLink = document.querySelector(`.toc-list a[href="#${entry.target.id}"]`);
+        if (activeLink) activeLink.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-100px 0px -60% 0px', threshold: 0 });
+
+  sections.forEach(s => observerToc.observe(s));
+</script>
+</body>
+</html>
