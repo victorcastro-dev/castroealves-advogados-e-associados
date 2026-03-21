@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.castroealvesadvogados.com.br/sitemap.xml
