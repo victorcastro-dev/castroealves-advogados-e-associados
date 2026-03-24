@@ -1,0 +1,21 @@
+{
+  "name": "Castro & Alves Advogados e Associados",
+  "short_name": "Castro & Alves",
+  "description": "Escritório especializado em Direito Trabalhista, Previdenciário, Saúde e Isenção de Imposto de Renda.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#08090C",
+  "theme_color": "#1E3A5F",
+  "icons": [
+    {
+      "src": "/favicon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
